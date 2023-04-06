@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.SettingsFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="290dp"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/baseline_person_24"
+            tools:srcCompat="@drawable/baseline_person_24">
+        </ImageView>
+        <Button
+            android:id="@+id/expandButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-60dp"
+            android:text="General"
+            android:textAllCaps="false"
+
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            app:icon="@drawable/baseline_person_24"
+            app:iconSize="18dp"
+            app:iconGravity="end"
+            app:iconTint="@color/black"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"/>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:id="@+id/expandSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Dark mode"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    >
+                </TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1" />
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/darkModeSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="60dp"
+                    android:checked="false"
+                    android:layout_gravity="start"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Version"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    >
+                </TextView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Version Number"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+
+                    >
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/menu_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Languages"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+
+            app:icon="@drawable/baseline_person_24"
+            app:iconTint="@color/black"
+            android:textColor="@color/black"
+            app:iconSize="18dp"
+            app:iconGravity="end"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"/>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/expandButtonTermsAndCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terms And Conditions"
+            android:textAlignment="viewStart"
+            app:icon="@drawable/baseline_person_24"
+            android:textAllCaps="false"
+
+            app:iconTint="@color/black"
+            android:textColor="@color/black"
+            app:iconSize="18dp"
+            app:iconGravity="end"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:icon="@drawable/baseline_person_24"
+            app:iconTint="@color/black"
+            app:iconSize="18dp"
+            app:iconGravity="end"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"/>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -5,30 +5,29 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.purpleplay_android.R
-import com.example.purpleplay_android.databinding.ActivityMainBinding
 
 class HomeScreenActivity : AppCompatActivity() {
     //VAR
-     private lateinit var binding: ActivityMainBinding
-    private lateinit var music : Button
+    // private lateinit var binding: ActivityMainBinding
+      lateinit var music : Button
     private lateinit var movie : Button
     private lateinit var home : Button
-    private lateinit var toggle: ActionBarDrawerToggle
+   // private lateinit var toggle: ActionBarDrawerToggle
 
 
     override  fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         requestRuntimePermission()
         setContentView(R.layout.homescreen_layout)
 
        // binding = ActivityMainBinding.inflate(layoutInflater)
        // setContentView(binding.root)
-        //for nav drawer
 
+        //for nav drawer
        // toggle = ActionBarDrawerToggle(this,binding.root,R.string.open,R.string.close)
 
 
@@ -39,10 +38,20 @@ class HomeScreenActivity : AppCompatActivity() {
 
 
 
-        music.setOnClickListener { val intent = Intent(this,Musichome_Activity::class.java) }
-            }
+        music.setOnClickListener {
+            //Log.e("setOnClickListener","CLICKEDDDDDDDDDDDDDDDDDDDd")
+            val intent = Intent(this,MusichomeActivity::class.java)
+            startActivity(intent)
+        }
 
-    //for requesting permission
+        movie.setOnClickListener {
+            //Log.e("setOnClickListener","CLICKEDDDDDDDDDDDDDDDDDDDd")
+            val intent = Intent(this,MovieHomeActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    //For requesting permission
     private fun requestRuntimePermission(){
     if(ActivityCompat.checkSelfPermission(this,android.Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
         ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE),13)

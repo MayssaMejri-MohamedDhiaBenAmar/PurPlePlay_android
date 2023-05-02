@@ -56,8 +56,7 @@ android:background="@drawable/playlist"
         android:layout_height="357dp"
         android:layout_margin="10dp"
         android:src="@drawable/cercle"
-        app:strokeColor="@color/purple_button"
-        ></com.google.android.material.imageview.ShapeableImageView>
+        app:strokeColor="@color/purple_button"></com.google.android.material.imageview.ShapeableImageView>
 
     <TextView
         android:id="@+id/songname"

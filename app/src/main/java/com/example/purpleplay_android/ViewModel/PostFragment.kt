@@ -65,7 +65,34 @@ class PostFragment : Fragment() {
 
                 }
             )
+        //Request
+        btn_send!!.setOnClickListener {
+            ApiService.postService.addPost(
+                PostsService.AddPost(
+                    msg!!.text.toString()
 
+                )
+            ).enqueue(object : Callback<PostsService.PostResponse> {
+                override fun onResponse(
+                    call: Call<PostsService.PostResponse>,
+                    response: Response<PostsService.PostResponse>
+                ) {
+                    if (response.code() == 200) {
+                        print("Added Post Successful")
+
+                    }
+                    else {
+                        println("status code is " + response.code())
+                    }
+                }
+
+                override fun onFailure(call: Call<PostsService.PostResponse>, t: Throwable) {
+
+                    println("HTTP ERROR")
+                    t.printStackTrace()}
+
+            })
+        }
 
 
 

@@ -21,7 +21,6 @@ interface PostsService {
 
 
     data class AddPost(
-        val title: String,
         val description: String
         )
 

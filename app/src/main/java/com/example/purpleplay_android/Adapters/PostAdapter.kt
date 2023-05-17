@@ -7,18 +7,17 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.purpleplay_android.Model.Music
 import com.example.purpleplay_android.Model.Post
 import com.example.purpleplay_android.R
 import com.example.purpleplay_android.ViewModel.PlaylistActivity
 
-class MusicAdapter(var items: MutableList<Music>) :
-    RecyclerView.Adapter<MusicAdapter.SearchViewHolder>() {
+class PostAdapter(var items: MutableList<Post>) :
+    RecyclerView.Adapter<PostAdapter.SearchViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchViewHolder {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.music_view, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.posts_view, parent, false)
         return SearchViewHolder(view)
     }
 
@@ -29,30 +28,21 @@ class MusicAdapter(var items: MutableList<Music>) :
     class SearchViewHolder(view: View) :
         RecyclerView.ViewHolder(view) {
 
-        private val imageIV: ImageView = itemView.findViewById(R.id.imageMV)
-        private val descriptionTV: TextView = itemView.findViewById(R.id.songNameMV)
-        private val descriptionAL: TextView = itemView.findViewById(R.id.songAlbumMV)
+        private val comment: TextView = itemView.findViewById(R.id.comment)
 
-        private val duration: TextView = itemView.findViewById(R.id.songDuration)
 
-        fun bindView(music: Music) {
+        fun bindView(post: Post) {
 
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, PlaylistActivity::class.java)
-                intent.putExtra("music", music)
-                intent.putExtra("class", "MusicAdapter")
+                intent.putExtra("post", post)
+                intent.putExtra("class", "PostAdapter")
 
                 itemView.context.startActivity(intent)
             }
 
-           /* ImageLoader.setImageFromUrl(
-                imageIV,
-                duration ,
-                Constant.BASE_URL_MUSIC +
-            )*/
-            music.filename
-            descriptionTV.text = music.title
-            descriptionAL.text = music.artist
+
+            comment.text = post.description
 
 
         }

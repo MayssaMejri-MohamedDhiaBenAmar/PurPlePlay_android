@@ -52,8 +52,8 @@ android:background="@drawable/playlist"
 
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:layout_width="wrap_content"
-        android:layout_height="357dp"
+        android:layout_width="356dp"
+        android:layout_height="342dp"
         android:layout_margin="10dp"
         android:src="@drawable/cercle"
         app:strokeColor="@color/purple_button"></com.google.android.material.imageview.ShapeableImageView>
@@ -77,37 +77,33 @@ android:background="@drawable/playlist"
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <ImageView
             android:id="@+id/skipback"
-            android:layout_width="30dp"
-            android:layout_height="69dp"
+            android:layout_width="wrap_content"
+            android:layout_height="73dp"
             android:backgroundTint="@color/purple_app"
-            app:icon="@drawable/skip_forward"
-            app:iconSize="40dp"
-            app:iconTint="@color/white"></com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            android:src="@drawable/skip_forward"></ImageView>
 
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <ImageView
             android:id="@+id/pause"
-            android:layout_width="30dp"
-            android:layout_height="69dp"
+            android:layout_width="77dp"
+            android:layout_height="91dp"
             android:layout_marginHorizontal="25dp"
+
             android:backgroundTint="@color/purple_button"
-            app:icon="@drawable/pause"
-            app:iconSize="50dp"
-            app:iconTint="@color/white"
+            android:src="@drawable/play"
 
-            app:shapeAppearanceOverlay="@style/curved"></com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            ></ImageView>
 
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <ImageView
             android:id="@+id/skip"
             android:layout_width="wrap_content"
-            android:layout_height="69dp"
+            android:layout_height="73dp"
             android:backgroundTint="@color/purple_app"
-            app:icon="@drawable/skip_forward_fill"
-            app:iconSize="40dp"
-            app:iconTint="@color/white"></com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+            android:src="@drawable/skip_forward_fill"></ImageView>
 
 
     </LinearLayout>

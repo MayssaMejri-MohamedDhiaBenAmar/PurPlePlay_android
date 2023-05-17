@@ -1,7 +1,7 @@
-package com.codepalace.chatbot.utils
+package com.example.purpleplay_android.UtilChat
 
-import com.codepalace.chatbot.utils.Constants.OPEN_GOOGLE
-import com.codepalace.chatbot.utils.Constants.OPEN_SEARCH
+import com.example.purpleplay_android.UtilChat.Constants.OPEN_GOOGLE
+import com.example.purpleplay_android.UtilChat.Constants.OPEN_SEARCH
 import java.sql.Date
 import java.sql.Timestamp
 import java.text.SimpleDateFormat

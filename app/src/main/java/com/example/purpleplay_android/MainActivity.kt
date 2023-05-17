@@ -9,8 +9,9 @@ import android.view.WindowInsets
 import android.view.WindowInsetsController
 import android.view.WindowManager
 import androidx.core.content.ContextCompat
-import com.example.purpleplay_android.ViewModel.ChatFragment
+import com.example.purpleplay_android.ViewModel.ChatBotFragment
 import com.example.purpleplay_android.ViewModel.HomeFragment
+import com.example.purpleplay_android.ViewModel.PostFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -38,7 +39,14 @@ class MainActivity : AppCompatActivity() {
                    true
                }
                R.id.chat -> {
-                   val fragment = ChatFragment()
+                   val fragment = ChatBotFragment()
+                   supportFragmentManager.beginTransaction()
+                       .replace(R.id.fragmentContainerView, fragment)
+                       .commit()
+                   true
+               }
+               R.id.forum_page -> {
+                   val fragment = PostFragment()
                    supportFragmentManager.beginTransaction()
                        .replace(R.id.fragmentContainerView, fragment)
                        .commit()

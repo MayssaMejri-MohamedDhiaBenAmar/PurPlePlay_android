@@ -9,7 +9,10 @@ data class Movie(
     val title: String,
     val artist: String,
     val filename: String,
-    val imagename: String,
+    val imageFilename: String,
     val genre: String,
-    val description : String
-    ) : Serializable
+    val description : String,
+    val acteur : String,
+    val acteur1 : String,
+    val acteur2 : String
+) : Serializable

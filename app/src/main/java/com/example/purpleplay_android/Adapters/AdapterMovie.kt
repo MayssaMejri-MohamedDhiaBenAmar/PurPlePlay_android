@@ -14,7 +14,7 @@ class AdapterMovie(private val dataList: List<Movie>) :
     RecyclerView.Adapter<AdapterMovie.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val titleTextView: TextView = itemView.findViewById(R.id.titleeee)
+      //  val titleTextView: TextView = itemView.findViewById(R.id.titleeee)
         val image: ImageView = itemView.findViewById(R.id.image3)
     }
 
@@ -26,7 +26,7 @@ class AdapterMovie(private val dataList: List<Movie>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val data = dataList[position]
-        holder.titleTextView.text = data.title
+     //   holder.titleTextView.text = data.title
       //  holder.image.im = data.filename
     }
 

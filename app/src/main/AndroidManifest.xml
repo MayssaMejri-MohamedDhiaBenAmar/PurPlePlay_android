@@ -24,6 +24,7 @@
         <activity android:name=".ViewModel.MovieHomeActivity"  ></activity>
         <activity android:name=".ViewModel.FavoriteActivity" ></activity>
         <activity android:name=".ViewModel.PlayMovieActivity" ></activity>
+        <activity android:name=".ViewModel.DetailsMovie" ></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"

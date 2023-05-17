@@ -2,7 +2,6 @@ package com.example.purpleplay_android.ViewModel
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -51,7 +50,7 @@ class ChatBotFragment : Fragment() {
         clickEvents()
 
         val random = (0..3).random()
-        customBotMessage("Hello there!My name is Clara i'm e-Constat assistance, how can I help?")
+        customBotMessage("Hello there!My name is Perla i'm PurPlePlay assistance, how can I help?")
         return view
     }
 

@@ -29,10 +29,10 @@
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/receive_round_box"
-        android:backgroundTint="#C8A5EC"
+        android:backgroundTint="#E8E7E8"
         android:padding="14dp"
         android:text="This is a sample message that will appear"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="14sp"
         android:visibility="visible" />
 

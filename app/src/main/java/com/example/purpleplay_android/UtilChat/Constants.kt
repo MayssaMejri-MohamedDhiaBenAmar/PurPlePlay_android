@@ -1,4 +1,4 @@
-package com.codepalace.chatbot.utils
+package com.example.purpleplay_android.UtilChat
 
 object Constants {
 

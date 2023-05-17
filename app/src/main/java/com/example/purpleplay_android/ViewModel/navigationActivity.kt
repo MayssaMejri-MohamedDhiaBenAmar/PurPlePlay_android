@@ -27,7 +27,7 @@ class navigationActivity : AppCompatActivity() {
                     true
                 }
                 R.id.chat -> {
-                    loadFragment(ChatFragment())
+                    loadFragment(ChatBotFragment())
                     true
                 }
 

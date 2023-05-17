@@ -20,4 +20,12 @@ object ApiService {
     val movieService: MovieService by lazy {
         retrofit().create(MovieService::class.java)
     }
+
+    val userService: UserService by lazy {
+        retrofit().create(UserService::class.java)
+    }
+
+    val postService: PostsService by lazy {
+        retrofit().create(PostsService::class.java)
+    }
 }

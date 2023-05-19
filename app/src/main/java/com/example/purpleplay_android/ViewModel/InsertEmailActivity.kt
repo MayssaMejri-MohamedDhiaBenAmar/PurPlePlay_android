@@ -24,6 +24,7 @@ class InsertEmailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.forgetpwd_layout)
+        supportActionBar?.hide()
 
         mailTIL = findViewById(R.id.lyt_email)
         mailTIET = findViewById(R.id.et_email)

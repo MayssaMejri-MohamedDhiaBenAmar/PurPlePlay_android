@@ -13,10 +13,7 @@ import com.example.purpleplay_android.Models.User
 import com.example.purpleplay_android.Services.ApiService
 import com.example.purpleplay_android.Services.UserService
 import com.example.purpleplay_android.Utils.Constant
-import com.example.purpleplay_android.ViewModel.HomePageActivity
-import com.example.purpleplay_android.ViewModel.InsertEmailActivity
-import com.example.purpleplay_android.ViewModel.SignUpActivity
-import com.example.purpleplay_android.ViewModel.UpdateProfileActivity
+import com.example.purpleplay_android.ViewModel.*
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.gson.Gson
@@ -38,6 +35,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_layout)
+        supportActionBar?.hide()
 
         //Var
         val context = this@MainActivity
@@ -57,60 +55,56 @@ class MainActivity : AppCompatActivity() {
         }
 
         signInBtn.setOnClickListener {
+            if (usernameTIET.text.toString() == "" || passwordTIET.text.toString() == "") {
+                showDialog(context,"Missing Fields ❌")
+            } else {
 
-            ApiService.userService.login(
-                UserService.LoginBody(
-                    username = usernameTIET.text.toString(),
-                    password = passwordTIET.text.toString()
-                )
-            ).enqueue( object : Callback<UserService.UserResponse> {
-                override fun onResponse(
-                    call: Call<UserService.UserResponse>,
-                    response: Response<UserService.UserResponse>
-                ) {
-                    if (response.code() == 200) {
-                        val json = Gson().toJson(response.body()!!.user)
-                        println(json)
-                        val sharedPreferences =
-                            getSharedPreferences(Constant.SHARED_PREF_SESSION, MODE_PRIVATE)
-                        val editor = sharedPreferences.edit()
-                        editor.putString("USER_DATA", "test Sting")
-                        val result = editor.commit()
-                        if (!result) {
-                            println("Failed to save USER_DATA to shared preferences")
+
+                ApiService.userService.login(
+                    UserService.LoginBody(
+                        username = usernameTIET.text.toString(),
+                        password = passwordTIET.text.toString()
+                    )
+                ).enqueue( object : Callback<UserService.UserResponse> {
+                    override fun onResponse(
+                        call: Call<UserService.UserResponse>,
+                        response: Response<UserService.UserResponse>
+                    ) {
+                        if (response.code() == 200) {
+                            val sharedPreferences =
+                                getSharedPreferences(Constant.SHARED_PREF_SESSION, MODE_PRIVATE)
+                            val sharedPreferencesEditor: SharedPreferences.Editor =
+                                sharedPreferences.edit()
+                            val json = Gson().toJson(response.body()!!.user)
+                            sharedPreferencesEditor.putString("USER_DATA", json)
+                            sharedPreferencesEditor.apply()
+                            var intent= Intent(this@MainActivity, MainActivityBeta::class.java)
+                            startActivity(intent)
                         }
-                        editor.apply()
-                        showDialog(context,"Login Successful")
-                        val userData = sharedPreferences.getString("USER_DATA", "")
-                        //val user = Gson().fromJson(userData, User::class.java)
-                        //println(user != null)
-                        println(userData)
-                        var intent= Intent(this@MainActivity, HomePageActivity::class.java)
-                        startActivity(intent)
+                        else if(response.code() == 403) {
+                            showDialog(context,"No User Found")
+                        }
+                        else if(response.code() == 400) {
+                            showDialog(context,"Wrong password ❌")
+                        }
+                        else if(response.code() == 402) {
+                            showDialog(context,"Missing Fields ❌")
+                        }
+                        else if(response.code() == 406) {
+                            showDialog(context,"Please Verify Your Account")
+                        }
+                        else {
+                            showDialog(context,"Missing Fields ❌")
+                        }
                     }
-                    else if(response.code() == 403) {
-                        showDialog(context,"No User Found")
-                    }
-                    else if(response.code() == 400) {
-                        showDialog(context,"Wrong password ❌")
-                    }
-                    else if(response.code() == 402) {
-                        showDialog(context,"Missing Fields ❌")
-                    }
-                    else if(response.code() == 406) {
-                        showDialog(context,"Please Verify Your Account")
-                    }
-                    else {
-                        showDialog(context,"Missing Fields ❌")
-                    }
-                }
 
-                override fun onFailure(call: Call<UserService.UserResponse>, t: Throwable) {
-                    println("HTTP ERROR")
-                    t.printStackTrace()
-                }
+                    override fun onFailure(call: Call<UserService.UserResponse>, t: Throwable) {
+                        println("HTTP ERROR")
+                        t.printStackTrace()
+                    }
 
-            } )
+                } )
+            }
 
         }
 

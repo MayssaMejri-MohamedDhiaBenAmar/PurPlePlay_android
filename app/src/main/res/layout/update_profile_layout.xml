@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:hint="Username..."
+                android:hint="@string/username"
                 android:inputType="textEmailAddress"
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:hint="Email..."
+                android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -68,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:hint="Password...."
+                android:hint="@string/password"
                 android:inputType="textPassword"
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -90,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:hint="Confirm Password...."
+                android:hint="@string/confirm_password"
                 android:inputType="textPassword"
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -106,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_launcher_background"
-            android:contentDescription="Image Description"
+            android:contentDescription="@string/image_description"
             android:layout_gravity="center"
             />
 
@@ -116,7 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:textSize="20sp"
-            android:text="Select Image"
+            android:text="@string/select_image"
             android:layout_gravity="center"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -134,7 +134,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:text="Male"
+                android:text="@string/male"
                 android:textColor="@color/purple_200"
                 android:textSize="18sp"
                 app:buttonTint="#757575" />
@@ -145,7 +145,7 @@
                 android:layout_marginStart="180dp"
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:text="Female"
+                android:text="@string/female"
                 android:textColor="@color/purple_200"
                 android:textSize="18sp"
                 app:buttonTint="#757575" />
@@ -158,7 +158,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:textSize="20dp"
-            android:text="Update"
+            android:text="@string/update"
             android:layout_gravity="center"
             app:layout_constraintStart_toStartOf="parent" />
 

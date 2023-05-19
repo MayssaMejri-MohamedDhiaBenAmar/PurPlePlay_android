@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">بيربل بلاي</string>
+    <string name="TermsAndCondition">الشروط والأحكام</string>
+    <string name="TC_1">مرحبًا بك في بيربل بلاي، التطبيق الذي يساعدك على مشاهدة الأفلام والاستماع إلى الموسيقى بسهولة. لاستخدام التطبيق ، ستحتاج إلى إنشاء حساب. من خلال إنشاء حساب واستخدام التطبيق ، فإنك توافق على تلك الشروط والأحكام.</string>
+    <string name="TC_2"><b>جمع البيانات</b> يقوم بيربل بلاي بجمع المعلومات الشخصية منك لتزويدك بأفضل تجربة ممكنة. ويشمل ذلك المعلومات مثل اسمك وعنوان بريدكتك الإلكتروني لتسهيل العملية ، بالإضافة إلى أي معلومات أخرى تختار تقديمها. لا يعرض بيربل بلاي أي إعلانات لك.</string>
+    <string name="TC_3"><b>وصول الجهاز</b>\n يتطلب بيربل بلاي الوصول إلى كاميرا جهازك للعمل بشكل صحيح. عند استخدام التطبيق ، فإنك تمنح بيربل بلاي إذنًا بالوصول إلى كاميرا جهازك.</string>
+    <string name="TC_4"><b>التكاملات مع الأطراف الثالثة</b>\n يستخدم بيربل بلاي خادم Node.js لتخزين ومعالجة البيانات. عند استخدام التطبيق ، فإنك توافق على جمع واستخدام ومشاركة بياناتك وفقًا لتلك الشروط والأحكام.</string>
+    <string name="TC_5"><b>تغييرات على هذه الشروط</b>\n يحتفظ بيربل بلاي بالحق في تحديث هذه الشروط والأحكام في أي وقت. إذا قمنا بإجراء أي تغييرات ، سننشر الشروط والأحكام المعدلة على هذه الصفحة وسنشير إلى تاريخ سريان الشروط والأحكام المعدلة. نشجعك على مراجعة هذه الشروط والأحكام بشكل دوري للبقاء على اطلاع على ممارساتنا.</string>
+    <string name="TC_6"><b>اتصل بنا</b> إذا كان لديك أي أسئلة حول هذه الشروط والأحكام ، يرجى الاتالاتصال بنا على البريد الإلكتروني PurplePlay@esprit.tn</string>
+    <string name="updatedDate">تحديث 5/5/2023</string>
+    <string name="version">النسخة</string>
+    <string name="versionNum">1.0.1</string>
+    <string name="change_password">تغيير كلمة المرور</string>
+    <string name="new_password">كلمة المرور الجديدة…</string>
+    <string name="confirm_password">تأكيد كلمة المرور…</string>
+    <string name="confirm">تأكيد</string>
+    <string name="forgot_password">هل نسيت كلمة المرور؟</string>
+    <string name="insert_mail">أدخل البريد</string>
+    <string name="insert_email">أدخل البريد الإلكتروني</string>
+    <string name="next">التالي</string>
+    <string name="username">اسم المستخدم…</string>
+    <string name="email">البريد الإلكتروني…</string>
+    <string name="password">كلمة المرور…</string>
+    <string name="image_description">وصف الصورة</string>
+    <string name="select_image">حدد الصورة</string>
+    <string name="male">ذكر</string>
+    <string name="female">أنثى</string>
+    <string name="update">تحديث</string>
+    <string name="dark_mode">الوضع الداكن</string>
+    <string name="remember_me">تذكرني</string>
+    <string name="create_an_account">إنشاء حساب</string>
+    <string name="sign_up">تسجيل</string>
+    <string name="forgot_your_password">هل نسيت كلمة المرور الخاصة بك؟</string>
+    <string name="insert_otp">أدخل رمز التحقق</string>
+    <string name="terms_and_conditions">الشروط والأحكام</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="settings">الإعدادات</string>
+    <string name="home">الرئيسية</string><string name="hello_blank_fragment">مرحبًا بك في الشاشة الفارغة</string>
+    <string name="arabic">العربية</string>
+    <string name="french">الفرنسية</string>
+    <string name="english">الإنجليزية</string>
+    <string name="OverView">نظرة عامة</string>
+    <string name="songs">الأغاني</string>
+    <string name="Favorite">المفضلة ♥</string>
+    <string name="back">رجوع</string>
+    <string name="start">00:00</string>
+    <string name="end">جار التحميل</string>
+    <string name="repeat">تكرار</string>
+    <string name="equalizer">معادل الصوت</string>
+    <string name="share">مشاركة</string>
+    <string name="song_name">اسم الأغنية</string>
+    <string name="anonyme">مجهول</string>
+    <string name="comment">تعليق</string>
+    <string name="your_feedback">ملاحظاتك</string>
+    <string name="post">نشر</string>
+    <string name="world_of_music">عالم الموسيقى</string>
+    <string name="movies">الأفلام</string>
+    <string name="popular_now">الأكثر شهرة الآن</string>
+    <string name="this_is_a_sample_message_that_will_appear">هذه رسالة تجريبية ستظهر</string>
+    <string name="welcome">أهلا بك!</string>
+    <string name="music">الموسيقى</string>
+    <string name="new_coming">جديد</string>
+    <string name="all">الكل</string>
+    <string name="languages">اللغات</string>
+    <string name="general">عام</string>
+    <string name="_2_h_30_min">2 س 30 د</string>
+    <string name="textview">عرض النص</string>
+    <string name="type_a_message">اكتب رسالة...</string>
+    <string name="send">إرسال</string>
+    <string name="perla">برلا 🤖</string>
+    <string name="title">العنوان</string>
+    <string name="artist">الفنان</string>
+    <string name="logout">تسجيل الخروج</string>
+</resources>

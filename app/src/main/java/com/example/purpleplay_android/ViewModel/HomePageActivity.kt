@@ -17,6 +17,7 @@ class HomePageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide()
         val sharedPreferences =
             getSharedPreferences(Constant.SHARED_PREF_SESSION, MODE_PRIVATE)
         val sharedPreferencesEditor: SharedPreferences.Editor =

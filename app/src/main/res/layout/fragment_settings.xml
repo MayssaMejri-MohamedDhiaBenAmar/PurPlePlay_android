@@ -4,30 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragments.SettingsFragment">
+    tools:context=".Fragments.SettingsFragment"
+    android:background="@color/background_home">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/background_home">
         <ImageView
             android:layout_width="350dp"
             android:layout_height="290dp"
             android:scaleType="centerInside"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/baseline_person_24"
-            tools:srcCompat="@drawable/baseline_person_24">
+            app:srcCompat="@drawable/logopurpleplay"
+            tools:srcCompat="@drawable/logopurpleplay">
         </ImageView>
         <Button
             android:id="@+id/expandButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="-60dp"
-            android:text="General"
+            android:text="@string/general"
             android:textAllCaps="false"
 
             android:textAlignment="viewStart"
             android:textColor="@color/black"
-            app:icon="@drawable/baseline_person_24"
+            app:icon="@drawable/baseline_settings_applications_24"
             app:iconSize="18dp"
             app:iconGravity="end"
             app:iconTint="@color/black"
@@ -52,9 +54,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Dark mode"
+                    android:text="@string/dark_mode"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="15dp"
+                    android:textColor="?attr/colorOnSecondary"
                     >
                 </TextView>
 
@@ -78,9 +81,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Version"
+                    android:text="@string/version"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="15dp"
+                    android:textColor="?attr/colorOnSecondary"
                     >
                 </TextView>
                 <View
@@ -90,10 +94,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Version Number"
+                    android:text="@string/versionNum"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="10dp"
+                    android:textColor="?attr/colorOnSecondary"
 
                     >
                 </TextView>
@@ -106,11 +111,11 @@
             android:id="@+id/menu_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Languages"
+            android:text="@string/languages"
             android:textAlignment="viewStart"
             android:textAllCaps="false"
 
-            app:icon="@drawable/baseline_person_24"
+            app:icon="@drawable/baseline_language_24"
             app:iconTint="@color/black"
             android:textColor="@color/black"
             app:iconSize="18dp"
@@ -123,9 +128,9 @@
             android:id="@+id/expandButtonTermsAndCondition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Terms And Conditions"
+            android:text="@string/terms_and_conditions"
             android:textAlignment="viewStart"
-            app:icon="@drawable/baseline_person_24"
+            app:icon="@drawable/baseline_construction_24"
             android:textAllCaps="false"
 
             app:iconTint="@color/black"
@@ -144,15 +149,16 @@
             android:id="@+id/logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Logout"
+            android:text="@string/logout"
             android:textAlignment="viewStart"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            app:icon="@drawable/baseline_person_24"
+            app:icon="@drawable/baseline_logout_24"
             app:iconTint="@color/black"
             app:iconSize="18dp"
             app:iconGravity="end"
-            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"/>
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:paddingBottom="58dp"/>
 
     </LinearLayout>
 

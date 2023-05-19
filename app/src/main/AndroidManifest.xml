@@ -33,6 +33,14 @@
         <activity android:name=".ViewModel.InsertEmailActivity" />
         <activity android:name=".ViewModel.OTPActivity" />
         <activity android:name=".ViewModel.HomePageActivity" />
+        <activity android:name=".ViewModel.PlaylistActivity"  ></activity>
+        <activity android:name=".ViewModel.MusichomeActivity" />
+        <activity android:name=".ViewModel.MovieHomeActivity" />
+        <activity android:name=".ViewModel.FavoriteActivity" ></activity>
+        <activity android:name=".ViewModel.PlayMovieActivity" ></activity>
+        <activity android:name=".ViewModel.DetailsMovie" ></activity>
+        <activity android:name=".ViewModel.HomeScreenActivity" ></activity>
+        <activity android:name=".ViewModel.MainActivityBeta" ></activity>
     </application>
 
 </manifest>

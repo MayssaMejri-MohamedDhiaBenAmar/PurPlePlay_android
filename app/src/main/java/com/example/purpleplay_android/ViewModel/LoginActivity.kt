@@ -30,6 +30,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
         setContentView(R.layout.login_layout)
+        supportActionBar?.hide()
         //Var
         val context = this@LoginActivity
         //UI Elements

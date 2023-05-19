@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.Dark" parent="AppTheme">
+        <item name="android:forceDarkAllowed">true</item>
+        <item name="android:windowLightStatusBar">@android:color/white</item>
+        <item name="android:windowBackground">@color/black</item>
+        <!-- Add any other attributes you want to change for dark mode -->
+    </style>
+</resources>

@@ -54,6 +54,7 @@ class UpdateProfileActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.update_profile_layout)
+        supportActionBar?.hide()
 
         //Var
         val context = this@UpdateProfileActivity

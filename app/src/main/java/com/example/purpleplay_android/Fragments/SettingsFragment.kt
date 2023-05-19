@@ -17,6 +17,7 @@ import android.widget.LinearLayout
 import android.widget.PopupMenu
 import androidx.annotation.MenuRes
 import androidx.appcompat.view.menu.MenuBuilder
+import androidx.core.app.ActivityCompat.recreate
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
@@ -26,6 +27,7 @@ import com.example.purpleplay_android.Utils.SessionManager
 import com.example.purpleplay_android.ViewModel.LoginActivity
 import com.google.android.material.switchmaterial.SwitchMaterial
 import java.util.*
+import androidx.appcompat.app.AppCompatDelegate
 
 class SettingsFragment : Fragment() {
 
@@ -40,14 +42,24 @@ class SettingsFragment : Fragment() {
         val darkModeSwitch = view.findViewById<SwitchMaterial>(R.id.darkModeSwitch)
 
         //DARKMode Switch
-        darkModeSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
+        darkModeSwitch.setOnCheckedChangeListener { _, _ ->
+            /*
             val backgroundColor = if (isChecked) {
                 R.color.dark_background_color
             } else {
                 R.color.light_background_color
             }
             view.setBackgroundColor(ContextCompat.getColor(requireContext(), backgroundColor))
+            if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }
+            requireActivity().recreate()
+            */
+            applyDarkMode()
         }
+
         //Language Menu
         val button = view.findViewById<Button>(R.id.menu_button)
         button.setOnClickListener { v: View ->
@@ -92,7 +104,7 @@ class SettingsFragment : Fragment() {
     @SuppressLint("RestrictedApi")
     private fun showMenu(v: View, @MenuRes menuRes: Int) {
         val ICON_MARGIN = 16
-        val popup = PopupMenu(requireContext()!!, v)
+        val popup = PopupMenu(requireContext(), v)
         popup.menuInflater.inflate(menuRes, popup.menu)
         if (popup.menu is MenuBuilder) {
             val menuBuilder = popup.menu as MenuBuilder
@@ -159,6 +171,15 @@ class SettingsFragment : Fragment() {
         }
         // Show the popup menu.
         popup.show()
+    }
+    private fun applyDarkMode() {
+        if (isDarkModeEnabled()) {
+            activity?.setTheme(R.style.AppTheme_Dark)
+        }
+    }
+    private fun isDarkModeEnabled(): Boolean {
+        val nightMode = AppCompatDelegate.getDefaultNightMode()
+        return nightMode == AppCompatDelegate.MODE_NIGHT_YES
     }
 
 

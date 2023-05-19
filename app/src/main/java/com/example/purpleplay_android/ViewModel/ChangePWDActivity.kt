@@ -26,6 +26,7 @@ class ChangePWDActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.change_password_layout)
+        supportActionBar?.hide()
 
         pwdTIL = findViewById(R.id.lyt_cPwd)
         pwdTIET =findViewById(R.id.et_cPwd)

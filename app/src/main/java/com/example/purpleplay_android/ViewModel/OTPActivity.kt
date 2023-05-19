@@ -21,6 +21,7 @@ class OTPActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.otp_layout)
+        supportActionBar?.hide()
 
         pinView=findViewById(R.id.pinView);
         button=findViewById(R.id.confirmOtp);

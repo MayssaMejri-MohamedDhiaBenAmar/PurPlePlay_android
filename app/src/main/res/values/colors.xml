@@ -43,5 +43,8 @@
     <color name="gray">#DAD5D5</color>
     <color name="red">#C11111</color>
 
+    <color name="background_home">#E2D0F2</color>
+    <color name="purple_app">#211323</color>
+    <color name="purple_button">#D08FE7</color>
 
 </resources>
